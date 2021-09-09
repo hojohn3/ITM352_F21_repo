@@ -13,17 +13,17 @@ img{
 margin-right: 10px;
 }
 
-.left {
+<div class=left> {
     float: left;
     width: 300px;
 }
 
-.right {
+<div class=right> {
     float: right;
     width: 300px;
 }
 
-.center {
+<div class=center> {
     margin-left: 300px;
     margin-right: 300px;
 } 
