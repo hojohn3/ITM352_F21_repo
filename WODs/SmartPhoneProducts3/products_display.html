@@ -1,32 +1,4 @@
-<script>
-    num_items = 5;
-
-// Product 1
-var brand1 = "HTC";
-        var price1 = ; 40.00;
-       var image1 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/HTC.jpg";
-    
-    // Product 2
-        var brand2 = "Apple";
-        var price2 = ; 75.00;
-       var image2 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/iphone-3gs.jpg";
-    
-    // Product 3
-        var brand3 = "Nokia";
-        var price3 = ; 35.00;
-       var image3 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/Nokia.jpg";
-    
-    // Product 4
-        var brand4 = "Samsung";
-        var price4 = ; 45.00;
-       var image4 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/Samsung.jpg";
-    
-    // Product 5
-        var brand5 = "Blackberry";
-        var price5 = ; 10.00;
-       var image5 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/Blackberry.jpg";
-    
-</script>
+<script> src="./products_data.js"></script>
 
 
 <!DOCTYPE html>
@@ -43,12 +15,12 @@ var brand1 = "HTC";
 <div><main>
 
 <script>
-    for(i=1; i<=num_items; i++) { 
+    for(i=0; i<= products.length; i++) { 
 document.write('
 <section class="item">
-        <h2>${eval('brand' + i)}</h2>
-        <p>${eval('price' + i)},</p>
-        <img ${eval('image' + i)}
+        <h2>${products[i].brand}</h2>
+        <p>${products[i].price},</p>
+        <img src="${products[i].image}">"
         </section>
 ');
 }
