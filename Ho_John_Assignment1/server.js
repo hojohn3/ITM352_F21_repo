@@ -4,7 +4,7 @@ Borrowed and modified Assignment 1, info_server_Ex4.js (Lab 13) screencasts
 */
 // Referred to and modified from Lab 13's Server Side Processing Screencast & Ex4
 var products = require('./products.json'); // Links to product_data.js and sets variable 'data'
-//const qs = require('qs'); // Use variable 'qs' (query String) as the loaded module
+const qs = require('qs'); // Use variable 'qs' (query String) as the loaded module Got from Noah Kim
 var express = require('express'); // Loads the Express module
 var app = express(); // Starts & places Express module to variable 'app'
 var myParser = require("body-parser"); // Grants access to POST data and loads the body-parser module
@@ -60,9 +60,3 @@ app.use(express.static('./public'));
 
 app.listen(8080, () => console.log(`listening on port 8080`)); // Request and instructs to listen on port 8080
 
-//if the data is valid, send them to the invoice, otherwise send them back to index
-if(Object.keys(errors).length == 0) {
-    response.redirect('./invoice.html?'+ qs.stringify(request.body)); //move to invoice page if no errors
-}else{
-    response.redirect('./index?'+ qs.stringify(request.body));
-};
