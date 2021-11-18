@@ -3,12 +3,17 @@ John Ho: server.js
 Borrowed and modified Assignment 1, info_server_Ex4.js (Lab 13) screencasts
 */
 // Referred to and modified from Lab 13's Server Side Processing Screencast & Ex4
-var data = require('./public/products.json'); // Links to product_data.js and sets variable 'data'
-var products = data.products; // Loads my product_data.js as var products
-const qs = require('qs'); // Use variable 'qs' (query String) as the loaded module
+var products = require('./products.json'); // Links to product_data.js and sets variable 'data'
+//const qs = require('qs'); // Use variable 'qs' (query String) as the loaded module
 var express = require('express'); // Loads the Express module
 var app = express(); // Starts & places Express module to variable 'app'
 var myParser = require("body-parser"); // Grants access to POST data and loads the body-parser module
+
+app.get("/product_data.js", function (request, response, next) { //Referred to Lab 13 Ex4
+    response.type('.js');
+    var products_str = `var products = ${JSON.stringify(products)};`;
+    response.send(products_str);
+});
 
 app.all('*', function (request, response, next) { // Links to my request POST
     console.log(request.method + ' to ' + request.path); // Write the request method in the console and path
@@ -52,4 +57,5 @@ function isNonNegInt(q, return_errors = false) { // Checks to see if the inputte
 }
 
 app.use(express.static('./public')); 
+
 app.listen(8080, () => console.log(`listening on port 8080`)); // Request and instructs to listen on port 8080

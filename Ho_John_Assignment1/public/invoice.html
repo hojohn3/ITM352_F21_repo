@@ -6,6 +6,9 @@
 <script src="./navbar.js" type="text/javascript">
   // This links it to the products array in navbar.js
 </script>  
+
+
+
 <script>
 // Referred to lecture video from Invoice4 lecture video and Assignment1 examples 
 let params = (new URL(document.location)).searchParams; // Retrieves the data (quantity, etc.) from submitPurchase and starts the purchase process 
@@ -76,7 +79,7 @@ let params = (new URL(document.location)).searchParams; // Retrieves the data (q
 }
 // Took the following expressions (tax, shipping, grand total) from Invoice4 but modified the values to better fit my product offerings
     // Compute tax
-        var tax_rate = 0.045;
+        var tax_rate = 0.0575;
         var tax = tax_rate*subtotal;
 
     // Compute shipping
