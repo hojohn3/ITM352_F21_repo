@@ -59,3 +59,10 @@ function isNonNegInt(q, return_errors = false) { // Checks to see if the inputte
 app.use(express.static('./public')); 
 
 app.listen(8080, () => console.log(`listening on port 8080`)); // Request and instructs to listen on port 8080
+
+//if the data is valid, send them to the invoice, otherwise send them back to index
+if(Object.keys(errors).length == 0) {
+    response.redirect('./invoice.html?'+ qs.stringify(request.body)); //move to invoice page if no errors
+}else{
+    response.redirect('./index?'+ qs.stringify(request.body));
+};
