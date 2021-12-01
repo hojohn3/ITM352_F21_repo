@@ -6,7 +6,7 @@
 function navbar() {
     document.write(`
     <ul>
-        <li style="float:left"><a href="./index.html">John's Mac Shack Home</a></li><br>
+        <li style="float:left"><a href="./index.html">Kevin's Mac Shack Home</a></li><br>
         <li><a href="./products_display.html${location.search}">Shopping Cart</a></li>
         <li><a href="./products_display.html${location.search}">Products</a></li>
         <li><a href="./login.html${location.search}">Login</a></li>
