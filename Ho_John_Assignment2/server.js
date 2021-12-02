@@ -37,7 +37,7 @@ if(fs.existsSync(filename)) {
 
 // ------------------------ Processing Login ------------------------ // 
 // Borrowed and modified from Lab 14 exercise and some from Alyssa Mencel, Ryan Tsuzaki, Tyler Johnson also helped with this (Fall 2020)
-app.post("/process_login", function (request, response, next) {
+app.post("/process_login", function (req, res, next) {
     var LogError = [];
     console.log(req.query);
     username = req.body.username.toLowerCase(); // Usernames are formatted as lowercase
