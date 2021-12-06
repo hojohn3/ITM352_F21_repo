@@ -6,7 +6,7 @@ Assignment 1: Borrowed and modified Assignment 1, info_server_Ex4.js (Lab 13)
 // Referred to and modified from Lab 13's Server Side Processing & Ex4
 var data = require('./public/product_data.js'); // Links to product_data.js and sets variable 'data'
 var products = data.products; // Loads my product_data.js as var products
-const qs = require('qs'); // Use variable 'qs' (query String) as the loaded module Ryan Tsuzaki helped me with this
+const qs = require('qs'); // Use variable 'qs' (query String) as the loaded module Marcus Bui helped me with this
 var express = require('express'); // Loads the Express module
 var app = express(); // Starts & places Express module to variable 'app'
 var myParser = require("body-parser"); // Grants access to POST data and loads the body-parser module
@@ -36,7 +36,7 @@ if(fs.existsSync(filename)) {
 }
 
 // ------------------------ Processing Login ------------------------ // 
-// Borrowed and modified from Lab 14 exercise and some from Alyssa Mencel, Ryan Tsuzaki, Tyler Johnson also helped with this (Fall 2020)
+// Borrowed and modified from Lab 14 exercise and some from Alyssa Mencel, Marcus Bui, Tyler Johnson also helped with this (Fall 2020)
 app.post("/process_login", function (req, res, next) {
     var LogError = [];
     console.log(req.query);
