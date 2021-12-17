@@ -1,0 +1,95 @@
+/* John Ho's Checkout Stylesheet */
+/* Author: John Ho */
+/* checkout.css */
+/* Borrowed and modified from W3Schools */
+
+/* Invoice table styling */
+table {
+    border-collapse: collapse;
+    border: 2;
+}
+th, td {
+    padding: 3px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+/* Styling the even and odd rows to have different colors */
+tr:nth-child(even) {
+    background-color: rgb(218, 216, 216);
+} 
+tr:nth-child(odd) {
+    background-color: rgb(212, 212, 212);
+}   
+th {
+    background-color: rgb(135, 175, 180);
+}
+/* General */
+.row {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    width: 75%;
+}
+.col-25 {
+    -ms-flex: 25%; 
+    flex: 25%;
+}  
+.col-50 {
+    -ms-flex: 50%; 
+    flex: 50%; 
+}
+.col-75 {
+    -ms-flex: 75%;
+    flex: 75%;
+}
+.col-25,
+.col-50,
+.col-75 {
+    padding: 0 16px;
+    float: left;
+}  
+.container {
+    background-color: rgb(224, 224, 202);
+    padding: 5px 20px 15px 20px;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 3px;
+}
+/* Billing Information styling */
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}  
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+/* Icon styling */
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+/* Complete Purchase Button styling */
+.btn {
+    background-color: rgb(190, 154, 106);
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.btn:hover {
+    background-color: rgb(147, 191, 197);
+}  
+span.price {
+    float: right;
+    color: black;
+}
